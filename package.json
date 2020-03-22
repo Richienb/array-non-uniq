@@ -1,6 +1,6 @@
 {
 	"name": "array-non-uniq",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "Get the non-unique items in an array.",
 	"repository": "https://github.com/Richienb/array-non-uniq.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
