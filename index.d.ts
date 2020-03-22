@@ -1,14 +1,19 @@
 /**
- * My awesome module.
- * @param input Lorem ipsum.
- * @param postfix Lorem ipsum.
+ * Get the non-unique items in an array.
+ * @param array The array to process.
  * @example
  * ```
- * const theModule = require("the-module");
- * theModule("unicorns");
- * //=> 'unicorns & rainbows'
+ * const arrayNonUniq = require("array-non-uniq");
+ *
+ * arrayUniq([1, 1, 2, 3, 3]);
+ * //=> [1, 3]
+ *
+ * arrayUniq(["foo", "foo", "bar", "foo"]);
+ * //=> ['foo']
  * ```
 */
-declare function theModule(input: string, { postfix }: { postfix?: string }): string;
+declare function arrayNonUniq<ValueType>(
+	array: ReadonlyArray<ValueType>
+): ValueType[]
 
-export = theModule;
+export = arrayNonUniq

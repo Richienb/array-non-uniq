@@ -1,7 +1,10 @@
 "use strict"
 
-module.exports = (input, { postfix = "rainbows" } = {}) => {
-	if (typeof input !== "string") throw new TypeError(`Expected a string, got ${typeof input}`)
-
-	return `${input} & ${postfix}`
+module.exports = (array) => {
+	if (!Array.isArray(array)) throw new TypeError("An array must be provided!")
+	const duplicates = []
+	array.forEach((value, index, array) => {
+		if ((array.indexOf(value) !== index || array.lastIndexOf(value) !== index) && !duplicates.includes(value)) duplicates.push(value)
+	})
+	return duplicates
 }

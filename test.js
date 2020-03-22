@@ -1,13 +1,7 @@
 const test = require("ava")
-const theModule = require(".")
+const arrayNonUniq = require(".")
 
 test("main", (t) => {
-	t.throws(() => {
-		theModule(123)
-	}, {
-		instanceOf: TypeError,
-		message: "Expected a string, got number",
-	})
-
-	t.is(theModule("unicorns"), "unicorns & rainbows")
+	t.deepEqual(arrayNonUniq([1, 2, 2, 3, 1, 4, 2, 4]), [1, 2, 4])
+	t.deepEqual(arrayNonUniq(["a", "a", "b", "a", "c", "a", "d"]), ["a"])
 })

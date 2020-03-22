@@ -1,41 +1,33 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# array-non-uniq [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/array-non-uniq/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/array-non-uniq)
 
-My awesome module.
+Get the non-unique items in an array.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/array-non-uniq.png)](https://npmjs.com/package/array-non-uniq)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install array-non-uniq
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const arrayNonUniq = require("array-non-uniq");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+arrayNonUniq([1, 1, 2, 3, 3]);
+//=> [1, 3]
+
+arrayNonUniq(["foo", "foo", "bar", "foo"]);
+//=> ['foo']
 ```
 
 ## API
 
-### theModule(input, options?)
+### arrayNonUniq(array)
 
-#### input
+#### array
 
-Type: `string`
+Type: `array`
 
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+The array to process.

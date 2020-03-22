@@ -1,8 +1,8 @@
 {
-	"name": "the-module",
+	"name": "array-non-uniq",
 	"version": "0.0.0",
-	"description": "My awesome module.",
-	"repository": "https://github.com/Richienb/the-module.git",
+	"description": "Get the non-unique items in an array.",
+	"repository": "https://github.com/Richienb/array-non-uniq.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
 	"license": "MIT",
 	"main": "index.js",
@@ -17,7 +17,14 @@
 		"lint": "xo",
 		"test": "yarn lint && ava"
 	},
-	"keywords": [],
+	"keywords": [
+		"array",
+		"unique",
+		"duplicate",
+		"find",
+		"index",
+		"create"
+	],
 	"dependencies": {},
 	"devDependencies": {
 		"ava": "^3.5.0",
